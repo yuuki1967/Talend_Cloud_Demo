@@ -5,6 +5,10 @@
     "type" : "job"
   },
   "relatedItems" : [ {
+    "id" : "_CfNesOLUEeqiBd8LDtObvA",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_kyEr8OLJEeqiBd8LDtObvA",
     "version" : "Latest",
     "type" : "property"
@@ -68,6 +72,10 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
+  }, {
+    "id" : "_CfNesOLUEeqiBd8LDtObvA - metadata",
+    "version" : "Latest",
+    "type" : "schema"
   }, {
     "id" : "_kyEr8OLJEeqiBd8LDtObvA - 顧客データスキーマ",
     "version" : "Latest",
