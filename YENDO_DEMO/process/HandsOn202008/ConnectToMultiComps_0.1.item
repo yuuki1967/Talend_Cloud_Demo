@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -107,13 +109,83 @@
     <routinesParameter id="_fVTDkOKwEeqiBd8LDtObvA" name="TalendString"/>
     <routinesParameter id="_fVcNgOKwEeqiBd8LDtObvA" name="TalendStringUtil"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b9da8b60-079a-4261-a511-829c9a52d7f4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8UvjeKuwWMgKxjnLLHfJD2XtPFTpuh8DZNCfs7vIX5Ul9sTr2xd4P0HZj2rI5zCz9dNa2aS8ceyW&#13;
-atTdGrjHsw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_af48773b-3e37-44f7-8656-c5e56a92a6c0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gVT2gr2XjuYbiB6e1O6156UrU6P1XEZYODdYUyhAJk3bY8SBbu5WBrtFSYXLeyz0g+gNOXF0xDsG&#13;
-elM3YCJn9g==</DigestValue></Reference></SignedInfo><SignatureValue>K9/O+oz5LWYNcI1Dpy0cl2emDZSF6wL2F3gGgDqiWjTiwwscnceUdVpG41aUpQY0SVqQzzZdpC1K&#13;
-MDAWNjsarZw1EIzANoxDXX8ohZkHT3UOtQ44/AcDZbGGmU5samS3Elp3rwtdXl3PMsbchh7axdrN&#13;
-FtO/P3olyhf8wbs8EngiueRxbRuGl2mM/lyRQ1a4WObJ/cBNjKcsiKWxryfJ2LJz7fJLO0hPQPzW&#13;
-bBj8B/UTXaJjq9vI9LFzDYc/0ef9wBiLntgrk6JINe7VY4VhxBhOhVkh/3SxLSUmalo0UwZt91G2&#13;
-XiCgdhSikwVYUEBu3uvd4tMgmtbleqJ6Pi8cEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="100"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6)"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn1"/>
+      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6)"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn2"/>
+      <elementValue elementRef="ARRAY" value="TalendString.getAsciiRandomString(6)"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRowGenerator_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="newColumn1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="newColumn2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="newColumn1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="newColumn2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;getAsciiRandomString&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;length&quot;,&quot;PARAMETER_VALUE&quot;:&quot;6&quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;TalendString&quot;}"/>
+      </column>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1f61536c-3149-44a6-819f-fa7901cfc55e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rvruss7cagrr4j/quEll7ShZCf3ugNNWhb0ZLZVS8yb1ydG7JeDOE2XI6rGuAWFYeMcT6LgOFdPL&#13;
+TFB+7wLTCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_74281932-20d6-4802-ab2d-ca15d485663f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jD+Y8b9bc0meIuKqTn/JgzZbusjbOA9xJ/nrWaltdSTB5Y7Y6tM7yfs9L6GafTOJzjlK3McE/MdV&#13;
+7AcJkH0MzA==</DigestValue></Reference></SignedInfo><SignatureValue>BfzT8Wkbyo2YNqMZrc9Z9u4f0dg62/hjBT+bq/V1P5KXtFVyw5K5mCkvn8kpjEJcBTm3MyAg6LPL&#13;
+rCosK1AvlOJSJBPWksds0TcthqPhr27ReudpKQTJRVArq0lXiWIbFULKoLTokMcdNusZ3FHmw5h3&#13;
+EcwsFcwpF72A/utOiHcNK2iVSBOc8disIXqFpmroTAyycSjCRaOcW8j9WmQfkjQ2RoBFAaZ2JPWp&#13;
+XVcdjbQxznb4Vo6nuf0j3IIlAaQfQNOPjAZBK6yPRM4wYq4PvWNRxmtKei9AQDy7vEWoOpo2hftX&#13;
+dN7bpU9P8O5+bb2p94gELJofobSvztXF2VeD/g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -135,4 +207,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_af48773b-3e37-44f7-8656-c5e56a92a6c0" Target="#_b9da8b60-079a-4261-a511-829c9a52d7f4"><Timestamp>2020-08-20 09:32:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_74281932-20d6-4802-ab2d-ca15d485663f" Target="#_1f61536c-3149-44a6-819f-fa7901cfc55e"><Timestamp>2020-08-20 09:36:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
