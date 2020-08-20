@@ -15,6 +15,7 @@
     <module>jobs/process/HandsOn202008/connecttomulticomps_0.1</module>
     <module>jobs/process/HandsOn202008/extractdata_0.1</module>
     <module>jobs/process/HandsOn202008/extractmapdata_0.1</module>
+    <module>jobs/process/HandsOn202008/extractmapdata_tofile_0.1</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
