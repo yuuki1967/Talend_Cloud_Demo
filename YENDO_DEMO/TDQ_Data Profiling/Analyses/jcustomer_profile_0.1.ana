@@ -16,30 +16,31 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_OZhsfuWgEeqct_F_WT5lYw"/>
     </context>
     <results xmi:id="_xjA4WOW9Eeqct_F_WT5lYw">
-      <resultMetadata xmi:id="_xjA4WeW9Eeqct_F_WT5lYw" executionDate="2020-08-24T12:59:40.687+0900" executionDuration="183" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
-      <indicators xsi:type="dataquality.indicators:AvgLengthWithNullIndicator" xmi:id="__BKfgOW9Eeqct_F_WT5lYw" count="208" computed="true" sumLength="1431.0">
-        <parameters xmi:id="__BKfgeW9Eeqct_F_WT5lYw">
-          <textParameter xmi:id="__BKfguW9Eeqct_F_WT5lYw" useBlank="false" useNulls="true"/>
-        </parameters>
+      <resultMetadata xmi:id="_xjA4WeW9Eeqct_F_WT5lYw" executionDate="2020-08-24T13:01:13.723+0900" executionDuration="142" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_chmekOW-Eeqct_F_WT5lYw" computed="true">
+        <parameters xmi:id="_chmekeW-Eeqct_F_WT5lYw"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_OZhsfuWgEeqct_F_WT5lYw"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Text Statistics/Average_Length_With_Null_0.1.definition#__vI_wJSOEd-TE5ti6XNR2Q"/>
-        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_PFT4kOW-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH(IFNULL(`Company`,''))), COUNT(*) FROM `jcustomers`.`jcustomer` WHERE (TRIM(IFNULL(`Company`,'NULL TALEND')) &lt;> '' ) " language="MySQL"/>
-        <builtInIndicatorDefinition xmi:id="_PFFPEOW-Eeqct_F_WT5lYw" name="Average Length With Null" label="Average Length With Null">
-          <taggedValue xmi:id="_PFFPEeW-Eeqct_F_WT5lYw" tag="Description" value="computes the average length of the field, counting null data as zero length values."/>
-          <taggedValue xmi:id="_PFFPEuW-Eeqct_F_WT5lYw" tag="Purpose" value="evaluates the average length of the textual record"/>
-          <sqlGenericExpression xmi:id="_PFFPE-W-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
-          <sqlGenericExpression xmi:id="_PFFPFOW-Eeqct_F_WT5lYw" body="SELECT SUM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL THEN 0 ELSE LENGTH(&lt;%=__COLUMN_NAMES__%>) END), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(NVL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) IS NOT NULL) &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_PFFPFeW-Eeqct_F_WT5lYw" body="SELECT SUM(LEN(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (LTRIM(RTRIM(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END)) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
-          <sqlGenericExpression xmi:id="_PFFPFuW-Eeqct_F_WT5lYw" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
-          <sqlGenericExpression xmi:id="_PFFPF-W-Eeqct_F_WT5lYw" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Ingres"/>
-          <sqlGenericExpression xmi:id="_PFFPGOW-Eeqct_F_WT5lYw" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="SQLite"/>
-          <sqlGenericExpression xmi:id="_PFFPGeW-Eeqct_F_WT5lYw" body="SELECT SUM(LENGTH(CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END)), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Hive"/>
-          <sqlGenericExpression xmi:id="_PFFPGuW-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_PFFPG-W-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( LTRIM(RTRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END ))  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_PFFPHOW-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN  &lt;%=__COLUMN_NAMES__%>  IS NULL  THEN 'NULL TALEND' ELSE  &lt;%=__COLUMN_NAMES__%>  END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Informix"/>
-          <sqlGenericExpression xmi:id="_PFFPHeW-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN '' ELSE &lt;%=__COLUMN_NAMES__%> END )), COUNT(*) FROM &lt;%=__TABLE_NAME__%>  WHERE ( TRIM( CASE WHEN &lt;%=__COLUMN_NAMES__%> IS NULL  THEN 'NULL TALEND' ELSE &lt;%=__COLUMN_NAMES__%> END )  &lt;>  '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="PostgreSQL"/>
-          <sqlGenericExpression xmi:id="_PFFPHuW-Eeqct_F_WT5lYw" body="SELECT SUM(CHAR_LENGTH(ISNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(ISNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Netezza"/>
-          <sqlGenericExpression xmi:id="_PFFPH-W-Eeqct_F_WT5lYw" body="SELECT SUM(LENGTH(IFNULL(&lt;%=__COLUMN_NAMES__%>,''))), COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE (TRIM(IFNULL(&lt;%=__COLUMN_NAMES__%>,'NULL TALEND')) &lt;> '' ) &lt;%=__AND_WHERE_CLAUSE__%>" language="Snowflake"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_c8ecsOW-Eeqct_F_WT5lYw" body="SELECT COUNT(*) FROM `jcustomers`.`jcustomer` WHERE `Company` IS NULL " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_c8PMIOW-Eeqct_F_WT5lYw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_c8PMIeW-Eeqct_F_WT5lYw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_c8PMIuW-Eeqct_F_WT5lYw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_c8PMI-W-Eeqct_F_WT5lYw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_chmekuW-Eeqct_F_WT5lYw" computed="true" blankCount="292">
+        <parameters xmi:id="_chmek-W-Eeqct_F_WT5lYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_OZhsfuWgEeqct_F_WT5lYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_c8ecseW-Eeqct_F_WT5lYw" body="SELECT COUNT(`Company`) FROM `jcustomers`.`jcustomer` WHERE TRIM(`Company`) = '' " language="MySQL"/>
+        <builtInIndicatorDefinition xmi:id="_c8Wg4OW-Eeqct_F_WT5lYw" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_c8Wg4eW-Eeqct_F_WT5lYw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_c8Wg4uW-Eeqct_F_WT5lYw" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_c8Wg4-W-Eeqct_F_WT5lYw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_c8Wg5OW-Eeqct_F_WT5lYw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_c8Wg5eW-Eeqct_F_WT5lYw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_c8Wg5uW-Eeqct_F_WT5lYw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_c8Wg5-W-Eeqct_F_WT5lYw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
         </builtInIndicatorDefinition>
       </indicators>
     </results>
