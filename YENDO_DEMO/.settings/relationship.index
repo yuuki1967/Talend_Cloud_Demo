@@ -755,10 +755,6 @@
     "id" : "_GpEAoOWgEeqct_F_WT5lYw - jcustomer",
     "version" : "Latest",
     "type" : "schema"
-  }, {
-    "id" : "_GpEAoOWgEeqct_F_WT5lYw - transaction",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
