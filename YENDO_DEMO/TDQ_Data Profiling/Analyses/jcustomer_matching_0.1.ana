@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_CxwRsOW9Eeqct_F_WT5lYw" name="jcustomer_matching" creationDate="2020-08-24T12:51:08.583+0900">
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_CxwRsOW9Eeqct_F_WT5lYw" name="jcustomer_matching" creationDate="2020-08-24T12:51:08.583+0900" defaultContext="Default">
+  <clientDependency href="../../metadata/connections/jcustomer_0.1.item#_DexvwOW9Eeqct_F_WT5lYw"/>
   <taggedValue xmi:id="_CxwRseW9Eeqct_F_WT5lYw" tag="PREVIEW_ROW_NUMBER" value="10000"/>
   <taggedValue xmi:id="_CxwRsuW9Eeqct_F_WT5lYw" tag="Status" value="development"/>
   <taggedValue xmi:id="_CxwRs-W9Eeqct_F_WT5lYw" tag="Author" value="yendo@asl.talend.com"/>
-  <taggedValue xmi:id="_CxwRtOW9Eeqct_F_WT5lYw" tag="Purpose"/>
-  <taggedValue xmi:id="_CxwRteW9Eeqct_F_WT5lYw" tag="Description"/>
+  <taggedValue xmi:id="_CxwRtOW9Eeqct_F_WT5lYw" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_CxwRteW9Eeqct_F_WT5lYw" tag="Description" value=""/>
   <taggedValue xmi:id="_CxwRtuW9Eeqct_F_WT5lYw" tag="Version" value="0.1"/>
-  <context xmi:id="_CxwRt-W9Eeqct_F_WT5lYw"/>
+  <taggedValue xmi:id="_Dar58OW9Eeqct_F_WT5lYw" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_Dar58eW9Eeqct_F_WT5lYw" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_Dar58uW9Eeqct_F_WT5lYw" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_Des3QOW9Eeqct_F_WT5lYw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="_CxwRt-W9Eeqct_F_WT5lYw">
+    <connection href="../../metadata/connections/jcustomer_0.1.item#_L0tmIOWgEeqct_F_WT5lYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_Q4InQuWhEeqct_F_WT5lYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_Q4InRuWhEeqct_F_WT5lYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_Q4InSuWhEeqct_F_WT5lYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_Q4InTuWhEeqct_F_WT5lYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/jcustomer_0.1.item#_Q4InUuWhEeqct_F_WT5lYw"/>
+  </context>
   <results xmi:id="_CxwRuOW9Eeqct_F_WT5lYw">
     <resultMetadata xmi:id="_CxwRueW9Eeqct_F_WT5lYw"/>
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_Cxw4wOW9Eeqct_F_WT5lYw"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_Cxw4weW9Eeqct_F_WT5lYw">
-      <builtInMatchRuleDefinition xmi:id="_Cxw4wuW9Eeqct_F_WT5lYw"/>
+      <builtInMatchRuleDefinition xmi:id="_Cxw4wuW9Eeqct_F_WT5lYw">
+        <matchRules xmi:id="_DW5mIOW9Eeqct_F_WT5lYw" name="一致ルール: 1"/>
+      </builtInMatchRuleDefinition>
     </indicators>
   </results>
   <parameters xmi:id="_Cxw4w-W9Eeqct_F_WT5lYw" analysisType="Match Analysis"/>
+  <contextType xmi:id="_DesQMOW9Eeqct_F_WT5lYw" confirmationNeeded="false" name="Default"/>
 </dataquality.analysis:Analysis>
