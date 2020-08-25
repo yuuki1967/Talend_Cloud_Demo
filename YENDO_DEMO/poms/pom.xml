@@ -23,6 +23,7 @@
     <module>jobs/process/demo/multpletbjoined_0.1</module>
     <module>jobs/process/HandsOn202008/parentjob_0.1</module>
     <module>jobs/process/HandsOn202008/dataintegrationdemo_subjobs_prejob_0.1</module>
+    <module>jobs/process/demo/salesforceusers_0.1</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
