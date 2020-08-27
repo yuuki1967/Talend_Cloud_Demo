@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_OIMBoOgyEeqX6I2XevYfXg" name="covid19" creationDate="2020-08-27T15:54:58.218+0900">
-  <taggedValue xmi:id="_OIMBoegyEeqX6I2XevYfXg" tag="Status" value="development"/>
-  <taggedValue xmi:id="_OIMBougyEeqX6I2XevYfXg" tag="Author" value="yendo@asl.talend.com"/>
-  <taggedValue xmi:id="_OIMBo-gyEeqX6I2XevYfXg" tag="Purpose"/>
-  <taggedValue xmi:id="_OIMBpOgyEeqX6I2XevYfXg" tag="Description"/>
-  <taggedValue xmi:id="_OIMBpegyEeqX6I2XevYfXg" tag="Version" value="0.1"/>
-  <context xmi:id="_OIMBpugyEeqX6I2XevYfXg"/>
-  <results xmi:id="_OIMBp-gyEeqX6I2XevYfXg">
-    <resultMetadata xmi:id="_OIMBqOgyEeqX6I2XevYfXg"/>
-  </results>
-  <parameters xmi:id="_OIMBqegyEeqX6I2XevYfXg" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_OIMBoOgyEeqX6I2XevYfXg" name="covid19" creationDate="2020-08-27T15:54:58.218+0900" defaultContext="Default">
+    <clientDependency href="../../metadata/fileDelimited/covid19_0.1.item#_nXPEAOgyEeqX6I2XevYfXg"/>
+    <taggedValue xmi:id="_OIMBoegyEeqX6I2XevYfXg" tag="Status" value="development"/>
+    <taggedValue xmi:id="_OIMBougyEeqX6I2XevYfXg" tag="Author" value="yendo@asl.talend.com"/>
+    <taggedValue xmi:id="_OIMBo-gyEeqX6I2XevYfXg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_OIMBpOgyEeqX6I2XevYfXg" tag="Description" value=""/>
+    <taggedValue xmi:id="_OIMBpegyEeqX6I2XevYfXg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_nXMnwegyEeqX6I2XevYfXg" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_nXMnwugyEeqX6I2XevYfXg" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_nXNO0OgyEeqX6I2XevYfXg" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_nXQ5MOgyEeqX6I2XevYfXg" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_OIMBpugyEeqX6I2XevYfXg">
+      <connection href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRYOgyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRY-gyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZOgyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZegyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZugyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRaOgyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRaegyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRaugyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRa-gyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRbOgyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRbegyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRbugyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRb-gyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRcOgyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRcegyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRcugyEeqX6I2XevYfXg"/>
+      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRc-gyEeqX6I2XevYfXg"/>
+    </context>
+    <results xmi:id="_OIMBp-gyEeqX6I2XevYfXg">
+      <resultMetadata xmi:id="_OIMBqOgyEeqX6I2XevYfXg"/>
+    </results>
+    <parameters xmi:id="_OIMBqegyEeqX6I2XevYfXg" dataFilter="_nXSHUOgyEeqX6I2XevYfXg" analysisType="Multiple Column Analysis" executionLanguage="Java"/>
+    <contextType xmi:id="_nXMnwOgyEeqX6I2XevYfXg" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_nXSHUOgyEeqX6I2XevYfXg" name="covid19">
+    <ranges xmi:id="_nXSHUegyEeqX6I2XevYfXg">
+      <expressions xmi:id="_nXSHUugyEeqX6I2XevYfXg">
+        <expression xsi:type="relational:TdExpression" xmi:id="_nXSHU-gyEeqX6I2XevYfXg" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
