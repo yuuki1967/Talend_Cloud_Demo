@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_OIMBoOgyEeqX6I2XevYfXg" name="covid19" creationDate="2020-08-27T15:54:58.218+0900">
+  <taggedValue xmi:id="_OIMBoegyEeqX6I2XevYfXg" tag="Status" value="development"/>
+  <taggedValue xmi:id="_OIMBougyEeqX6I2XevYfXg" tag="Author" value="yendo@asl.talend.com"/>
+  <taggedValue xmi:id="_OIMBo-gyEeqX6I2XevYfXg" tag="Purpose"/>
+  <taggedValue xmi:id="_OIMBpOgyEeqX6I2XevYfXg" tag="Description"/>
+  <taggedValue xmi:id="_OIMBpegyEeqX6I2XevYfXg" tag="Version" value="0.1"/>
+  <context xmi:id="_OIMBpugyEeqX6I2XevYfXg"/>
+  <results xmi:id="_OIMBp-gyEeqX6I2XevYfXg">
+    <resultMetadata xmi:id="_OIMBqOgyEeqX6I2XevYfXg"/>
+  </results>
+  <parameters xmi:id="_OIMBqegyEeqX6I2XevYfXg" analysisType="Multiple Column Analysis"/>
+</dataquality.analysis:Analysis>
