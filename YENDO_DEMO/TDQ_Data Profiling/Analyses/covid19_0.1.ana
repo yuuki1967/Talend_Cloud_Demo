@@ -2,6 +2,15 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
   <dataquality.analysis:Analysis xmi:id="_OIMBoOgyEeqX6I2XevYfXg" name="covid19" creationDate="2020-08-27T15:54:58.218+0900" defaultContext="Default">
     <clientDependency href="../../metadata/fileDelimited/covid19_0.1.item#_nXPEAOgyEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/BE_Code_postal_0.1.pattern#_CeMqQOgzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/DE_Postleitzahl__postal_code__0.1.pattern#_CeWbQugzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/FR_Code_postal_0.1.pattern#_CedwAegzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/FR_Insee_Code_0.1.pattern#_Cej2ougzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/Postal_code_or_Pin_code_of_India_0.1.pattern#_CepWMugzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/Swiss_Zip_Code_validation_0.1.pattern#_Cevc0ugzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/US_State_Codes_0.1.pattern#_Ce2KgOgzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/US_Zipcode_Validation_0.1.pattern#_Ce7qEugzEeqX6I2XevYfXg"/>
+    <clientDependency href="../../TDQ_Libraries/Patterns/Regex/address/Valid_UK_Post_Codes_Upper_and_Lower_Case_0.1.pattern#_CfBJoOgzEeqX6I2XevYfXg"/>
     <taggedValue xmi:id="_OIMBoegyEeqX6I2XevYfXg" tag="Status" value="development"/>
     <taggedValue xmi:id="_OIMBougyEeqX6I2XevYfXg" tag="Author" value="yendo@asl.talend.com"/>
     <taggedValue xmi:id="_OIMBo-gyEeqX6I2XevYfXg" tag="Purpose" value=""/>
@@ -14,10 +23,6 @@
     <context xmi:id="_OIMBpugyEeqX6I2XevYfXg">
       <connection href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRYOgyEeqX6I2XevYfXg"/>
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
-      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRaOgyEeqX6I2XevYfXg"/>
-      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRaegyEeqX6I2XevYfXg"/>
-      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRaugyEeqX6I2XevYfXg"/>
-      <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRa-gyEeqX6I2XevYfXg"/>
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRbOgyEeqX6I2XevYfXg"/>
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRbegyEeqX6I2XevYfXg"/>
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRbugyEeqX6I2XevYfXg"/>
@@ -28,26 +33,87 @@
       <analysedElements xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRc-gyEeqX6I2XevYfXg"/>
     </context>
     <results xmi:id="_OIMBp-gyEeqX6I2XevYfXg">
-      <resultMetadata xmi:id="_OIMBqOgyEeqX6I2XevYfXg" message="それぞれのカラムは少なくと&amp;#xD882;&amp;#xDC21;つのインジケータを持っていなければなりません、それぞれのカラムの計算のためにインジケータを選択してください。" executionNumber="1"/>
-      <indicators xsi:type="dataquality.indicators:BenfordLawFrequencyIndicator" xmi:id="_4eKvwOgyEeqX6I2XevYfXg">
-        <parameters xmi:id="_4eKvwegyEeqX6I2XevYfXg" topN="50"/>
+      <resultMetadata xmi:id="_OIMBqOgyEeqX6I2XevYfXg" message="それぞれのカラムは少なくと&amp;#xD882;&amp;#xDC21;つのインジケータを持っていなければなりません、それぞれのカラムの計算のためにインジケータを選択してください。" executionNumber="2"/>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHKsOgzEeqX6I2XevYfXg" name="BE Code postal">
+        <parameters xmi:id="_CeHxwOgzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHxwegzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/BE_Code_postal_0.1.pattern#_NwUnsD4LEd20H7qFpzB9dg"/>
+          </dataValidDomain>
+        </parameters>
         <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
-        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Fraud Detection/Benford_Law_Frequency_0.1.definition#_yRkFIezIEeG0fbygDv6UrQ"/>
-        <builtInIndicatorDefinition xmi:id="_6sDjoOgyEeqX6I2XevYfXg" name="Benford Law Frequency" label="Benford Law Frequency">
-          <taggedValue xmi:id="_6sDjoegyEeqX6I2XevYfXg" tag="Description" value="Benford's law is used by accountants to detect possible instances of fraud based on the distribution of digits in numbers."/>
-          <taggedValue xmi:id="_6sDjougyEeqX6I2XevYfXg" tag="Purpose" value="evaluate the possible instances of fraud"/>
-          <sqlGenericExpression xmi:id="_6sDjo-gyEeqX6I2XevYfXg" body="SELECT cast(LEFT(&lt;%=__COLUMN_NAMES__%>,1) as char), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY LEFT(&lt;%=__COLUMN_NAMES__%>,1) order by LEFT(&lt;%=__COLUMN_NAMES__%>,1)" language="SQL"/>
-          <sqlGenericExpression xmi:id="_6sDjpOgyEeqX6I2XevYfXg" body="SELECT cast(SUBSTR(&lt;%=__COLUMN_NAMES__%>,0,1) as char), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY SUBSTR(&lt;%=__COLUMN_NAMES__%>,0,1) order by SUBSTR(&lt;%=__COLUMN_NAMES__%>,0,1)" language="Oracle"/>
-          <sqlGenericExpression xmi:id="_6sDjpegyEeqX6I2XevYfXg" body="SELECT SUBSTRING(cast(&lt;%=__COLUMN_NAMES__%> as char) FROM 1 FOR 2), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY SUBSTRING(cast(&lt;%=__COLUMN_NAMES__%> as char) FROM 1 FOR 2) order by SUBSTRING(cast(&lt;%=__COLUMN_NAMES__%> as char) FROM 1 FOR 2)" language="Teradata"/>
-          <sqlGenericExpression xmi:id="_6sDjpugyEeqX6I2XevYfXg" body="SELECT SUBSTRING(cast(&lt;%=__COLUMN_NAMES__%> as char),1,2), COUNT(*)  FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY SUBSTRING(cast(&lt;%=__COLUMN_NAMES__%> as char),1,2) order by SUBSTRING(cast(&lt;%=__COLUMN_NAMES__%> as char),1,2)" language="PostgreSQL"/>
-          <sqlGenericExpression xmi:id="_6sDjp-gyEeqX6I2XevYfXg" body="SELECT cast(SUBSTR(&lt;%=__COLUMN_NAMES__%>,0,1) as char), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY 1 order by 1" language="Informix"/>
-          <sqlGenericExpression xmi:id="_6sDjqOgyEeqX6I2XevYfXg" body="SELECT SUBSTRING(CONVERT(char(15),&lt;%=__COLUMN_NAMES__%>),1,1), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY SUBSTRING(CONVERT(char(15),&lt;%=__COLUMN_NAMES__%>),1,1) order by SUBSTRING(CONVERT(char(15),&lt;%=__COLUMN_NAMES__%>),1,1)" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
-          <sqlGenericExpression xmi:id="_6sDjqegyEeqX6I2XevYfXg" body="SELECT substr(&lt;%=__COLUMN_NAMES__%>,1,1), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY substr(&lt;%=__COLUMN_NAMES__%>,1,1)" language="Hive"/>
-          <sqlGenericExpression xmi:id="_6sDjqugyEeqX6I2XevYfXg" body="SELECT SUBSTR(TO_CHAR(&lt;%=__COLUMN_NAMES__%>),1,1) , COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY SUBSTR(TO_CHAR(&lt;%=__COLUMN_NAMES__%>),1,1) order by SUBSTR(TO_CHAR(&lt;%=__COLUMN_NAMES__%>),1,1)" language="Vertica Database"/>
-          <sqlGenericExpression xmi:id="_6sDjq-gyEeqX6I2XevYfXg" body="SELECT cast(SUBSTR(&lt;%=__COLUMN_NAMES__%>,1,1) as char), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY 1 order by 1" language="Netezza"/>
-          <sqlGenericExpression xmi:id="_6sDjrOgyEeqX6I2XevYfXg" body="SELECT SUBSTRING(&lt;%=__COLUMN_NAMES__%>,1,1), COUNT(*)  FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY 1 order by 1" language="Redshift"/>
-          <sqlGenericExpression xmi:id="_6sDjregyEeqX6I2XevYfXg" body="SELECT substr(cast(&lt;%=__COLUMN_NAMES__%> as STRING),1,1), COUNT(*) c FROM &lt;%=__TABLE_NAME__%> t &lt;%=__WHERE_CLAUSE__%> GROUP BY substr(cast(&lt;%=__COLUMN_NAMES__%> as STRING),1,1)" language="Google BigQuery"/>
-        </builtInIndicatorDefinition>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHxwugzEeqX6I2XevYfXg" name="DE Postleitzahl (postal code)">
+        <parameters xmi:id="_CeHxw-gzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHxxOgzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/DE_Postleitzahl__postal_code__0.1.pattern#_rK7EgD4LEd20H7qFpzB9dg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHxxegzEeqX6I2XevYfXg" name="FR Code postal">
+        <parameters xmi:id="_CeHxxugzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHxx-gzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/FR_Code_postal_0.1.pattern#_EJ_moD4LEd20H7qFpzB9dg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHxyOgzEeqX6I2XevYfXg" name="FR Insee Code">
+        <parameters xmi:id="_CeHxyegzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHxyugzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/FR_Insee_Code_0.1.pattern#_wXkbQEChEeWDcpMk51Q9_w"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHxy-gzEeqX6I2XevYfXg" name="Postal code or Pin code of India">
+        <parameters xmi:id="_CeHxzOgzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHxzegzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/Postal_code_or_Pin_code_of_India_0.1.pattern#_Ego7UIygEd6Dle_8xC0lwg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHxzugzEeqX6I2XevYfXg" name="Swiss Zip Code validation">
+        <parameters xmi:id="_CeHxz-gzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHx0OgzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/Swiss_Zip_Code_validation_0.1.pattern#__GBswIyfEd6Dle_8xC0lwg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHx0egzEeqX6I2XevYfXg" name="US State Codes">
+        <parameters xmi:id="_CeHx0ugzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHx0-gzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/US_State_Codes_0.1.pattern#_pWgP8LkgEeSVYtNTxh_-xg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHx1OgzEeqX6I2XevYfXg" name="US Zipcode Validation">
+        <parameters xmi:id="_CeHx1egzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHx1ugzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/US_Zipcode_Validation_0.1.pattern#_n2tqUIybEd6Dle_8xC0lwg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RegexpMatchingIndicator" xmi:id="_CeHx1-gzEeqX6I2XevYfXg" name="Valid UK Post Codes Upper and Lower Case">
+        <parameters xmi:id="_CeHx2OgzEeqX6I2XevYfXg">
+          <dataValidDomain xmi:id="_CeHx2egzEeqX6I2XevYfXg">
+            <patterns href="../../TDQ_Libraries/Patterns/Regex/address/Valid_UK_Post_Codes_Upper_and_Lower_Case_0.1.pattern#_fi29wIybEd6Dle_8xC0lwg"/>
+          </dataValidDomain>
+        </parameters>
+        <analyzedElement xsi:type="TalendMetadata:MetadataColumn" href="../../metadata/fileDelimited/covid19_0.1.item#_JzqRZ-gyEeqX6I2XevYfXg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Pattern Matching/Regular_Expression_Matching_0.1.definition#_yb-_8Dh8Ed2XmO7pl5Yuyg"/>
       </indicators>
     </results>
     <parameters xmi:id="_OIMBqegyEeqX6I2XevYfXg" dataFilter="_nXSHUOgyEeqX6I2XevYfXg" analysisType="Multiple Column Analysis" executionLanguage="Java"/>
