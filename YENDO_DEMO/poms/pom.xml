@@ -27,6 +27,7 @@
     <module>jobs/process/demo/salesforceregistusers_0.1</module>
     <module>jobs/process/demo/handsondemo_0.1</module>
     <module>jobs/joblets/hnadson_javlet_0.1</module>
+    <module>jobs/process/HandsOn202008/testjavlet_0.1</module>
   </modules>
   <properties>
     <signer.version>7.2.1</signer.version>
