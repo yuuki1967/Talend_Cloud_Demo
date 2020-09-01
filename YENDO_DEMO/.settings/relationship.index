@@ -171,13 +171,9 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "_kyEr8OLJEeqiBd8LDtObvA",
+    "id" : "_xcdEsOgrEeqX6I2XevYfXg",
     "version" : "Latest",
-    "type" : "property"
-  }, {
-    "id" : "_wSGXkOLfEeqiBd8LDtObvA",
-    "version" : "Latest",
-    "type" : "property"
+    "type" : "joblet"
   }, {
     "id" : "DQTechnical",
     "version" : "Latest",
@@ -238,14 +234,6 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_kyEr8OLJEeqiBd8LDtObvA - 顧客データスキーマ",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_wSGXkOLfEeqiBd8LDtObvA - 購買履歴スキーマ",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
